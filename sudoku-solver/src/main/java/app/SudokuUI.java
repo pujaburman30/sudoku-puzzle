@@ -1,3 +1,5 @@
+package app;
+
 import java.awt.Color;
 import java.awt.Container;
 import java.awt.Dimension;
@@ -84,7 +86,6 @@ public class SudokuUI extends JFrame {
 
 	private class InputListener implements ActionListener {
 
-		@Override
 		public void actionPerformed(ActionEvent e) {
 			// All the 9*9 JTextFileds invoke this handler. We need to determine
 			// which JTextField (which row and column) is the source for this invocation.

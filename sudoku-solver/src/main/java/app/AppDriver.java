@@ -1,3 +1,5 @@
+package app;
+
 import java.util.Scanner;
 
 import javax.swing.SwingUtilities;
@@ -8,7 +10,7 @@ public class AppDriver {
 		
 		Scanner sc = new Scanner(System.in);
 		//int grid[][] = new int[9][9];
-		int[][] puzzle = {
+		final int[][] puzzle = {
 				{3, 0, 6, 5, 0, 8, 4, 0, 2},
 				{5, 2, 9, 1, 3, 4, 7, 6, 8},
 				{4, 8, 7, 6, 2, 9, 0, 3, 1},
@@ -20,7 +22,7 @@ public class AppDriver {
 				{7, 4, 5, 2, 8, 6, 3, 1, 9}
 		};
 		int j;
-		int grid[][] = {
+		final int grid[][] = {
 				{3, 0, 6, 5, 0, 8, 4, 0, 0},
 				{5, 2, 0, 0, 0, 0, 0, 0, 0},
 				{0, 8, 7, 0, 0, 0, 0, 3, 1},

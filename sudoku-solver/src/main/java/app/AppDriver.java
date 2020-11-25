@@ -8,7 +8,7 @@ public class AppDriver {
 
 	public static void main(String[] args) {
 		
-		Scanner sc = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);//test
 		//int grid[][] = new int[9][9];
 		final int[][] puzzle = {
 				{3, 0, 6, 5, 0, 8, 4, 0, 2},

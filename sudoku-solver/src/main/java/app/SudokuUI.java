@@ -1,5 +1,5 @@
 package app;
-
+import java.awt.Button;
 import java.awt.Color;
 import java.awt.Container;
 import java.awt.Dimension;
@@ -41,11 +41,14 @@ public class SudokuUI extends JFrame {
 	private JTextField[][] tfCells = new JTextField[GRID_SIZE][GRID_SIZE];
 	private int[][] puzzle;
 	private int[][] unsolved;
-
+	/*Button b=new Button("Click Here");
+	b.setBounds(50,100,80,30);*/
+	//cp.add(b);
 	public SudokuUI(int grid[][],int solvedGrid[][]) {
 		this.puzzle = solvedGrid;
 		this.unsolved = grid;
 		Container cp = getContentPane();
+		
 		cp.setLayout(new GridLayout(GRID_SIZE, GRID_SIZE));  // 9x9 GridLayout
 
 		// Allocate a common listener as the ActionEvent listener for all the
@@ -82,10 +85,12 @@ public class SudokuUI extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  // Handle window closing
 		setTitle("Sudoku");
 		setVisible(true);
+		
 	}
 
 	private class InputListener implements ActionListener {
 
+		@Override
 		public void actionPerformed(ActionEvent e) {
 			// All the 9*9 JTextFileds invoke this handler. We need to determine
 			// which JTextField (which row and column) is the source for this invocation.
@@ -140,9 +145,8 @@ public class SudokuUI extends JFrame {
 			if(solved){
 				System.out.println("Congratulation! Puzzle solved!");
 				JOptionPane.showMessageDialog(null, "Congratulation! Puzzle solved!");
+				System.exit(0);
 			}
-			else
-				System.out.println("yet to solve..");
 			solved = false;
 		}
 

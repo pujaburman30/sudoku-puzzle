@@ -1,2 +1,2 @@
 # sudoku-puzzle
-Sudoku Solver using java.
+Solve it till you make it!
